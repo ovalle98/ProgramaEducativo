@@ -783,7 +783,6 @@ INSERT INTO historial_estatus (id_inscripcion, id_estatus_ant, id_estatus_act, f
 
 COMMIT;
 
-
 -- ACTUALIZAR EL ESTATUS DE LOS ALUMNOS EN LA TABLA DE INSCRIPCIONES SEGÚN SU HISTORIAL DE ESTATUS
 --Bajas
 UPDATE inscripciones AS i
@@ -795,7 +794,14 @@ COMMIT;
 
 UPDATE inscripciones AS i
 INNER JOIN historial_estatus AS h ON i.id_inscripcion = h.id_inscripcion
+SET i.id_estatus = 3
+WHERE h.id_estatus_act IN (4,7);
+
+COMMIT;
+
+UPDATE inscripciones AS i
+INNER JOIN historial_estatus AS h ON i.id_inscripcion = h.id_inscripcion
 SET i.id_estatus = 1
-WHERE h.id_estatus_act NOT IN (2,3);
+WHERE h.id_estatus_act NOT IN (2,3,4,7);
 
 COMMIT;
