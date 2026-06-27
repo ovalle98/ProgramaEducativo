@@ -12,6 +12,24 @@ WHERE i.id_estatus = 1
 ORDER BY a.nombre, a.id_alumno
 ;
 
+-- ==============================================================================
+-- Objetivo: Obtener alumnos que tuvieron al menos un cambio de estatus
+-- en los últimos 30 días.
+-- ==============================================================================
+SELECT DISTINCT a.id_alumno, a.nombre,
+	e_ant.estatus as estatus_anterior,
+	e_act.estatus as estatus_actual,
+	DATE_FORMAT(i.fecha_inscripcion, '%d/%m/%Y') AS fecha_inscripcion,
+	DATE_FORMAT(H.fecha_cambio, '%d/%m/%Y') AS fecha_cambio,
+	h.motivo
+FROM inscripciones AS i
+INNER JOIN alumnos AS a ON i.id_alumno = a.id_alumno
+INNER JOIN historial_estatus AS h ON i.id_inscripcion = h.id_inscripcion
+INNER JOIN estatus AS e_ant ON h.id_estatus_ant = e_ant.id_estatus
+INNER JOIN estatus AS e_act ON h.id_estatus_act = e_act.id_estatus
+WHERE fecha_cambio > DATE_SUB(NOW(), INTERVAL 31 DAY)
+ORDER BY a.id_alumno, h.fecha_cambio DESC;
+
 
 -- ==============================================================================
 -- Objetivo: Obtener la tasa de baja por programa
