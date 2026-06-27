@@ -637,29 +637,29 @@ COMMIT;
 
 -- 6) Insertar alumnos que se dieron de baja Y regresaron
 INSERT INTO historial_estatus (id_inscripcion, id_estatus_ant, id_estatus_act, fecha_cambio, motivo) VALUES
-(6, 1, 3, STR_TO_DATE('29/10/2017', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(13, 1, 3, STR_TO_DATE('06/04/2022', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(20, 1, 3, STR_TO_DATE('14/06/2025', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(27, 1, 3, STR_TO_DATE('14/04/2022', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(34, 1, 3, STR_TO_DATE('16/02/2017', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(41, 1, 3, STR_TO_DATE('16/10/2021', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(48, 1, 3, STR_TO_DATE('26/04/2024', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(55, 1, 3, STR_TO_DATE('14/02/2020', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(62, 1, 3, STR_TO_DATE('01/11/2016', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(69, 1, 3, STR_TO_DATE('29/04/2025', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(76, 1, 3, STR_TO_DATE('16/02/2014', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(83, 1, 3, STR_TO_DATE('20/07/2020', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(90, 1, 3, STR_TO_DATE('16/08/2016', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(97, 1, 3, STR_TO_DATE('13/04/2019', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(104, 1, 3, STR_TO_DATE('17/03/2020', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(111, 1, 3, STR_TO_DATE('07/04/2025', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(118, 1, 3, STR_TO_DATE('07/08/2021', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(125, 1, 3, STR_TO_DATE('20/07/2021', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(132, 1, 3, STR_TO_DATE('18/08/2020', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(139, 1, 3, STR_TO_DATE('08/07/2014', '%d/%m/%Y'), 'Falta de interes en el programa'),
+(6, 1, 2, STR_TO_DATE('29/10/2017', '%d/%m/%Y'), 'Despidos de la empresa'),
+(13, 1, 2, STR_TO_DATE('06/04/2022', '%d/%m/%Y'), 'Despidos de la empresa'),
+(20, 1, 2, STR_TO_DATE('14/06/2025', '%d/%m/%Y'), 'Despidos de la empresa'),
+(27, 1, 2, STR_TO_DATE('14/04/2022', '%d/%m/%Y'), 'Despidos de la empresa'),
+(34, 1, 2, STR_TO_DATE('16/02/2017', '%d/%m/%Y'), 'Despidos de la empresa'),
+(41, 1, 2, STR_TO_DATE('16/10/2021', '%d/%m/%Y'), 'Despidos de la empresa'),
+(48, 1, 2, STR_TO_DATE('26/04/2024', '%d/%m/%Y'), 'Despidos de la empresa'),
+(55, 1, 2, STR_TO_DATE('14/02/2020', '%d/%m/%Y'), 'Despidos de la empresa'),
+(62, 1, 2, STR_TO_DATE('01/11/2016', '%d/%m/%Y'), 'Despidos de la empresa'),
+(69, 1, 2, STR_TO_DATE('29/04/2025', '%d/%m/%Y'), 'Despidos de la empresa'),
+(76, 1, 2, STR_TO_DATE('16/02/2014', '%d/%m/%Y'), 'Despidos de la empresa'),
+(83, 1, 2, STR_TO_DATE('20/07/2020', '%d/%m/%Y'), 'Despidos de la empresa'),
+(90, 1, 2, STR_TO_DATE('16/08/2016', '%d/%m/%Y'), 'Despidos de la empresa'),
+(97, 1, 2, STR_TO_DATE('13/04/2019', '%d/%m/%Y'), 'Despidos de la empresa'),
+(104, 1, 2, STR_TO_DATE('17/03/2020', '%d/%m/%Y'), 'Despidos de la empresa'),
+(111, 1, 2, STR_TO_DATE('07/04/2025', '%d/%m/%Y'), 'Despidos de la empresa'),
+(118, 1, 2, STR_TO_DATE('07/08/2021', '%d/%m/%Y'), 'Despidos de la empresa'),
+(125, 1, 2, STR_TO_DATE('20/07/2021', '%d/%m/%Y'), 'Despidos de la empresa'),
+(132, 1, 2, STR_TO_DATE('18/08/2020', '%d/%m/%Y'), 'Despidos de la empresa'),
+(139, 1, 2, STR_TO_DATE('08/07/2014', '%d/%m/%Y'), 'Despidos de la empresa'),
 (146, 1, 3, STR_TO_DATE('08/06/2014', '%d/%m/%Y'), 'Falta de interes en el programa'),
 (153, 1, 3, STR_TO_DATE('17/07/2014', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(160, 1, 3, STR_TO_DATE('03/07/2024', '%d/%m/%Y'), 'Falta de interes en el programa'),
+(160, 1, 2, STR_TO_DATE('03/07/2024', '%d/%m/%Y'), 'Despidos de la empresa'),
 (167, 1, 3, STR_TO_DATE('08/10/2025', '%d/%m/%Y'), 'Falta de interes en el programa'),
 (174, 1, 3, STR_TO_DATE('01/11/2016', '%d/%m/%Y'), 'Falta de interes en el programa'),
 (181, 1, 3, STR_TO_DATE('09/05/2025', '%d/%m/%Y'), 'Falta de interes en el programa'),
@@ -683,52 +683,42 @@ INSERT INTO historial_estatus (id_inscripcion, id_estatus_ant, id_estatus_act, f
 (307, 1, 3, STR_TO_DATE('26/07/2018', '%d/%m/%Y'), 'Falta de interes en el programa'),
 (314, 1, 3, STR_TO_DATE('13/02/2019', '%d/%m/%Y'), 'Falta de interes en el programa'),
 (321, 1, 3, STR_TO_DATE('20/08/2025', '%d/%m/%Y'), 'Falta de interes en el programa'),
-(6, 3, 6, STR_TO_DATE('25/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(13, 3, 6, STR_TO_DATE('13/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(20, 3, 6, STR_TO_DATE('16/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(27, 3, 6, STR_TO_DATE('17/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(34, 3, 6, STR_TO_DATE('31/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(41, 3, 6, STR_TO_DATE('29/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(48, 3, 6, STR_TO_DATE('12/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(55, 3, 6, STR_TO_DATE('26/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(62, 3, 6, STR_TO_DATE('22/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(69, 3, 6, STR_TO_DATE('26/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(76, 3, 6, STR_TO_DATE('14/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(83, 3, 6, STR_TO_DATE('23/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(90, 3, 6, STR_TO_DATE('27/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(97, 3, 6, STR_TO_DATE('18/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(104, 3, 6, STR_TO_DATE('31/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(111, 3, 6, STR_TO_DATE('06/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(118, 3, 6, STR_TO_DATE('26/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(125, 3, 6, STR_TO_DATE('21/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(132, 3, 6, STR_TO_DATE('03/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(139, 3, 6, STR_TO_DATE('30/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(146, 3, 6, STR_TO_DATE('14/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(153, 3, 6, STR_TO_DATE('31/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(160, 3, 6, STR_TO_DATE('22/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(167, 3, 6, STR_TO_DATE('09/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(174, 3, 6, STR_TO_DATE('13/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(181, 3, 6, STR_TO_DATE('04/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(188, 3, 6, STR_TO_DATE('28/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(195, 3, 6, STR_TO_DATE('24/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(202, 3, 6, STR_TO_DATE('03/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(209, 3, 6, STR_TO_DATE('17/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(216, 3, 6, STR_TO_DATE('21/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(223, 3, 6, STR_TO_DATE('17/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(230, 3, 6, STR_TO_DATE('09/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(237, 3, 6, STR_TO_DATE('31/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(244, 3, 6, STR_TO_DATE('03/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(251, 3, 6, STR_TO_DATE('30/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(258, 3, 6, STR_TO_DATE('05/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(265, 3, 6, STR_TO_DATE('09/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(272, 3, 6, STR_TO_DATE('13/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(279, 3, 6, STR_TO_DATE('01/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(286, 3, 6, STR_TO_DATE('19/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(293, 3, 6, STR_TO_DATE('22/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(300, 3, 6, STR_TO_DATE('25/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(307, 3, 6, STR_TO_DATE('16/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(314, 3, 6, STR_TO_DATE('16/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
-(321, 3, 6, STR_TO_DATE('05/06/2026', '%d/%m/%Y'), 'Reingreso al programa');
+(76, 2, 6, STR_TO_DATE('07/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(83, 2, 6, STR_TO_DATE('05/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(90, 2, 6, STR_TO_DATE('18/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(97, 2, 6, STR_TO_DATE('15/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(104, 2, 6, STR_TO_DATE('02/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(111, 2, 6, STR_TO_DATE('23/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(118, 2, 6, STR_TO_DATE('15/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(125, 2, 6, STR_TO_DATE('26/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(132, 2, 6, STR_TO_DATE('17/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(139, 2, 6, STR_TO_DATE('23/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(146, 3, 6, STR_TO_DATE('24/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(153, 3, 6, STR_TO_DATE('30/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(160, 2, 6, STR_TO_DATE('27/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(167, 3, 6, STR_TO_DATE('30/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(174, 3, 6, STR_TO_DATE('31/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(181, 3, 6, STR_TO_DATE('12/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(188, 3, 6, STR_TO_DATE('30/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(195, 3, 6, STR_TO_DATE('29/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(202, 3, 6, STR_TO_DATE('17/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(209, 3, 6, STR_TO_DATE('07/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(216, 3, 6, STR_TO_DATE('28/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(223, 3, 6, STR_TO_DATE('22/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(230, 3, 6, STR_TO_DATE('10/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(237, 3, 6, STR_TO_DATE('12/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(244, 3, 6, STR_TO_DATE('21/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(251, 3, 6, STR_TO_DATE('27/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(258, 3, 6, STR_TO_DATE('23/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(265, 3, 6, STR_TO_DATE('14/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(272, 3, 6, STR_TO_DATE('29/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(279, 3, 6, STR_TO_DATE('19/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(286, 3, 6, STR_TO_DATE('20/05/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(293, 3, 6, STR_TO_DATE('04/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(300, 3, 6, STR_TO_DATE('16/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(307, 3, 6, STR_TO_DATE('19/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(314, 3, 6, STR_TO_DATE('13/06/2026', '%d/%m/%Y'), 'Reingreso al programa'),
+(321, 3, 6, STR_TO_DATE('17/06/2026', '%d/%m/%Y'), 'Reingreso al programa');
 
 COMMIT;
 
@@ -780,28 +770,5 @@ INSERT INTO historial_estatus (id_inscripcion, id_estatus_ant, id_estatus_act, f
 (308, 1, 7, STR_TO_DATE('14/06/2026', '%d/%m/%Y'), 'Suspendido por falta de pago'),
 (315, 1, 7, STR_TO_DATE('21/06/2026', '%d/%m/%Y'), 'Suspendido por falta de pago'),
 (322, 1, 7, STR_TO_DATE('16/06/2026', '%d/%m/%Y'), 'Suspendido por falta de pago');
-
-COMMIT;
-
--- ACTUALIZAR EL ESTATUS DE LOS ALUMNOS EN LA TABLA DE INSCRIPCIONES SEGÚN SU HISTORIAL DE ESTATUS
---Bajas
-UPDATE inscripciones AS i
-INNER JOIN historial_estatus AS h ON i.id_inscripcion = h.id_inscripcion
-SET i.id_estatus = h.id_estatus_act
-WHERE h.id_estatus_act IN (2,3);
-
-COMMIT;
-
-UPDATE inscripciones AS i
-INNER JOIN historial_estatus AS h ON i.id_inscripcion = h.id_inscripcion
-SET i.id_estatus = 3
-WHERE h.id_estatus_act IN (4,7);
-
-COMMIT;
-
-UPDATE inscripciones AS i
-INNER JOIN historial_estatus AS h ON i.id_inscripcion = h.id_inscripcion
-SET i.id_estatus = 1
-WHERE h.id_estatus_act NOT IN (2,3,4,7);
 
 COMMIT;
