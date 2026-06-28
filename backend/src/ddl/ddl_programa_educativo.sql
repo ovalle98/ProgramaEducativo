@@ -75,8 +75,7 @@ CREATE TABLE IF NOT EXISTS inscripciones (
 	CONSTRAINT FK_INSCRIPCIONES_IDPROGRAMA FOREIGN KEY (id_programa)
 		REFERENCES programas (id_programa) ON UPDATE RESTRICT ON DELETE RESTRICT,
 	CONSTRAINT FK_INSCRIPCIONES_IDESTATUS FOREIGN KEY (id_estatus)
-		REFERENCES estatus (id_estatus) ON UPDATE RESTRICT ON DELETE RESTRICT,
-	CONSTRAINT CHK_INSCRIPCIONES_ESTATUS CHECK (id_estatus IN (1, 2, 3))
+		REFERENCES estatus (id_estatus) ON UPDATE RESTRICT ON DELETE RESTRICT
 );
 
 -- =============================================================================
