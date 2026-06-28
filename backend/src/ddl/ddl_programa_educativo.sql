@@ -5,7 +5,7 @@
 -- Charset: utf8mb4 | Collation: utf8mb4_unicode_ci
 -- =============================================================================
 
---DROP DATABASE IF EXISTS db_programa_educativo;
+DROP DATABASE IF EXISTS db_programa_educativo;
 CREATE DATABASE db_programa_educativo;
 
 ALTER DATABASE db_programa_educativo
