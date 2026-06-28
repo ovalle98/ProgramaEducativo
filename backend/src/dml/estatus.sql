@@ -11,5 +11,4 @@ INSERT INTO estatus (estatus) VALUES
 ('Inscrito'),
 ('Reingreso'),
 ('Suspendido');
-
 COMMIT;

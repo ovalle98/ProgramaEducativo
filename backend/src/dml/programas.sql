@@ -14,5 +14,4 @@ INSERT INTO programas (nombre) VALUES
 ('Maestría en Dirección'),
 ('Maestría en Educación'),
 ('Secundaria Abierta');
-
 COMMIT;
