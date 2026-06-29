@@ -1,0 +1,5 @@
+# Ignore checkpoint files created by Jupyter Notebook
+.ipynb_checkpoints
+
+.env
+
