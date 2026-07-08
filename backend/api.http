@@ -1,0 +1,23 @@
+### Recuperar los estatus
+GET http://localhost:3000/estatus
+
+### Recuperar los progrmas
+GET http://localhost:3000/programas
+
+### Recuperar la infromación de los alumnos
+GET http://localhost:3000/alumnos
+
+### Recuperar la infromación de los alumnos
+GET http://localhost:3000/alumnos?nombre=PA
+
+###
+GET http://localhost:3000/alumnos?id_programa=3
+
+###
+GET http://localhost:3000/alumnos?id_programa=3&nombre=Ju
+
+###
+GET http://localhost:3000/alumnos?id_estatus=4&nombre=
+
+###
+GET http://localhost:3000/alumnos?id_estatus=4&id_programa=3&nombre=Ju
