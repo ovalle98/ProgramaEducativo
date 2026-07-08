@@ -1,0 +1,45 @@
+<button
+   (click) = "toggleSidebar()"
+   type="button"
+   class="text-gray-500 bg-transparent border border-transparent hover:bg-gray-100
+         font-medium rounded-lg ms-3 mt-3
+         text-sm p-2 inline-flex sm:hidden"
+>
+   <span class="sr-only">Open sidebar</span>
+   <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10"/>
+   </svg>
+</button>
+
+@if(isOpenMenu) {
+<div
+  (click)="closeSidebar()"
+  class="fixed top-0 right-0 bottom-0 left-64 z-30 bg-gray-900/50 sm:hidden"
+  aria-hidden="true"
+></div>
+}
+
+<aside class="fixed top-0 left-0 z-40 w-64 h-full transition-transform sm:translate-x-0" aria-label="Sidebar"
+   [ngClass]="{'-translate-x-full': !isOpenMenu, 'translate-x-0': isOpenMenu}">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-cyan-700 ">
+        <div class="flex items-center ps-2.5 mb-5 text-neutral-300">
+            <svg class="h-6 me-3" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l6.16-3.422A12.083 12.083 0 0112 21a12.083 12.083 0 01-6.16-9.422L12 14z"/>
+            </svg>
+            <span class="self-center text-lg text-heading font-semibold whitespace-nowrap">Programa Educativo</span>
+        </div>
+
+        <ul class="sapce-y-2 font-medium text-neutral-200">
+            @for (item of menuItems; track $index; let i = $index) {
+                <li>
+                    <a [routerLink]="item.path" class="flex items-center px-2 py-1.5 text-body rounded-base hover:bg-neutral-tertiary hover:text-neutral-300 group">
+                        <span class="w-5 h-5 transition duration-75 group-hover:text-neutral-300" [innerHTML]="getSafeIcon(item.icon)"></span>
+                        <span class="ms-3">{{item.name}}</span>
+                    </a>
+                </li>
+            }
+        </ul>
+
+   </div>
+</aside>

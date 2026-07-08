@@ -1,0 +1,122 @@
+
+<div class="space-y-4 rounded overflow-hidden shadow-lg bg-zinc-100 pb-5 pr-2 pl-3">
+    <div class="flex text-center mt-3 mb-2">
+        <h2 class="text-base font-semibold text-slate-800 flex-1 gap-2">
+            Alumnos inscritos
+        </h2>
+    </div>
+<!-- Filtros -->
+<div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:items-center">
+
+    <!-- Buscar por nombre -->
+    <div class="relative w-full sm:flex-1 sm:min-w-[200px]">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none text-gray-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+        </div>
+
+        <input
+            type="search"
+            class="block w-full p-2 ps-10 bg-zinc-100 text-gray-900 text-sm
+            border border-b-2 border-gray-300 rounded-lg
+            focus:outline-none focus:ring-0 focus:border-cyan-700 peer
+            shadow-sm placeholder:text-gray-500"
+            placeholder="Buscar por nombre"
+            [(ngModel)]="filtro.busqueda"
+            (ngModelChange)="toggleBtnClean()"
+        />
+    </div>
+
+    <!-- Filtro estatus -->
+    <select [(ngModel)]="filtro.estatus" (ngModelChange)="toggleBtnClean()"
+        class="w-full sm:w-auto sm:flex-1 sm:min-w-[160px] block py-2.5 px-2 text-sm
+            text-gray-900 bg-transparent
+            border-0 border-b-2 border-gray-300 rounded-none appearance-none
+            focus:outline-none focus:ring-0 focus:border-cyan-700 peer"
+        >
+        <option value=0>Todos los estatus</option>
+        @for (item of allEstatus; track $index;) {
+            <option [ngValue]="item.id_estatus">{{item.estatus}}</option>
+        }
+    </select>
+
+    <!-- Filtro programa -->
+    <select [(ngModel)]="filtro.programa" (ngModelChange)="toggleBtnClean()"
+        class="w-full sm:w-auto sm:flex-1 sm:min-w-[160px] block py-2.5 px-2 text-sm
+            text-gray-900 bg-transparent
+            border-0 border-b-2 border-gray-300 rounded-none appearance-none
+            focus:outline-none focus:ring-0 focus:border-cyan-700 peer"
+        >
+        <option value=0>Todos los programas</option>
+        @for (programa of allProgramas; track $index;) {
+            <option [ngValue]="programa.id_programa">{{programa.nombre}}</option>
+        }
+    </select>
+
+    <!-- Botones -->
+    <div class="flex gap-2 w-full sm:w-auto">
+        <button (click)="cleanFiltro()" class="flex-1 sm:flex-none text-cyan-700 bg-zinc-100 text-sm
+            font-medium rounded-lg px-4 py-2.5 focus:outline-none"
+            [ngClass]="{'hover:bg-cyan-600 hover:text-white': isClean, 'disabled:opacity-50': !isClean}"
+            //[ngClass]="{'disabled': !isClean}"
+            [disabled]="!isClean"
+            >
+            Limpiar
+        </button>
+
+        <button (click)="aplicarFiltros()" class="flex-1 sm:flex-none text-cyan-700 bg-zinc-100 text-sm
+            hover:bg-cyan-600 hover:text-white font-medium rounded-lg px-4 py-2.5 focus:outline-none">
+            Buscar
+        </button>
+    </div>
+
+</div>
+
+<!-- Tabla -->
+  <div class="relative overflow-x-auto bg-white shadow-sm rounded-lg border border-gray-200">
+    <table class="w-full text-sm text-left rtl:text-right">
+      <thead class="text-sm bg-slate-400 border-b rounded-lg border-gray-200">
+        <tr>
+          <th class="px-4 py-3 text-center font-medium">Alumno</th>
+          <th class="px-4 py-3 text-center font-medium">Esmpresa</th>
+          <th class="px-4 py-3 text-center font-medium">Programa</th>
+          <th class="px-4 py-3 text-center font-medium">Estatus</th>
+        </tr>
+      </thead>
+
+      <tbody class="divide-y divide-slate-50">
+        <!-- Sin resultados -->
+        @if (alumnos.length === 0) {
+            <tr class="bg-white border-b border-gray-200">
+                <td colspan="6" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                    No se encontraron alumnos con los filtros actuales.
+                </td>
+            </tr>
+        }
+
+        <!-- Filas -->
+        @for (alumno of alumnos; track $index) {
+            <tr class="hover:bg-slate-200 transition
+                bg-white border-b border-gray-200">
+            <td class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                {{alumno.nombre}}
+            </td>
+            <td class="px-6 py-4 text-gray-600">
+                {{ alumno.empresa }}
+            </td>
+            <td class="px-6 py-4 text-gray-600">
+                {{ alumno.programa }}
+            </td>
+            <td class="px-6 py-4 ">
+                <span class="text-xs font-medium px-1.5 py-0.5 rounded-full"
+                    [class]="estatusClass(alumno.id_estatus)">{{alumno.estatus}}</span>
+            </td>
+            </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
