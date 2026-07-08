@@ -18,6 +18,7 @@ Antes de comenzar, asegúrate de tener instalado las siguientes herramientas:
 - **[MariaDB](https://mariadb.org/download/)**
 - **[Python](https://www.python.org/downloads/)**
 - **[Visual Studio Code](https://code.visualstudio.com/)** - Editor de código de su agrado
+- **[Node.js](https://nodejs.org/es/download)**
 
 <div align="center">
 
@@ -118,3 +119,80 @@ Se abrirá el navegador automáticamente en `http://localhost:8888`. Navega a la
 > Dentro de cada notebook ejecuta todas las celdas con `Kernel > Restart & Run All` o con el atajo `Shift + Enter` celda por celda.
 
 ---
+
+
+
+<div align="center">
+
+## Instalación y ejecución del proyecto
+
+
+</div>
+
+### Instalación
+
+1. Clona el repositorio
+
+  ```sh
+    git clone https://github.com/ovalle98/ProgramaEducativo.git
+  ```
+
+
+2. Dirijete a la carpeta backend
+
+  ```sh
+    cd C:\tu_direccion\ProgramaEducativo\backend
+  ```
+
+3. Intala los paquetes de NPM para el backend local
+
+  ```sh
+    npm install
+  ```
+
+4. Crea un archivo .env y agrega los siguientes datos con base a tu información
+
+  ```sh
+    DB_HOST=localhost
+    DB_PORT=port_mariadb
+    DB_USER=roo_o_tu_usuario
+    DB_PASSWORD=tu_paswword
+    DB_NAME=db_programa_educativo
+    PORT = 3000
+  ```
+
+5. Ejecuta el backend local
+
+  ```sh
+    npm run dev
+  ```
+
+6. Dirijetea la carpeta prog_educ
+
+  ```sh
+    cd cd C:\tu_direccion\ProgramaEducativo\prog_educ
+  ```
+
+7. Intala los paquetes de NPM para el frontend local
+
+  ```sh
+    npm install
+  ```
+
+8. En los archivos ubicados en prog_educ\services cambia el apiUrl por el PORT que pusiste en el punto 4
+
+  ```sh
+    apiURL = 'http://localhost:3000/alumnos'
+  ```
+
+9. Ejecuta el fronted local en C:\tu_direccion\ProgramaEducativo\prog_educ
+
+  ```sh
+    ng serve
+  ```
+
+10. En el archivo backend\middlewares\cors.js agrega la URL en el se ejecuto el frontend
+
+  ```sh
+    origin: 'http://localhost:4200'
+  ```
